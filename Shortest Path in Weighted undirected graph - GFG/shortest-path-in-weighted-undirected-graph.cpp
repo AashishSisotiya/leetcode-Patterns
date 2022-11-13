@@ -14,6 +14,10 @@ class Solution {
             adj[it[1]].push_back({it[0],it[2]});
         }
         
+        //this question is the slight change in the standard dijkastra algorithm 
+        // we have to keep track of the node from which we are coming 
+        // for that we will use a parent array 
+        
         priority_queue<pair<int,int>,vector<pair<int,int>> , greater<pair<int,int>>> pq;
         vector<int> dist(n+1,1e9),parent(n+1);
         for(int i=0;i<=n;i++){
